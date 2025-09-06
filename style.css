@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+
+.montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.hind-madurai-light {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.hind-madurai-regular {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hind-madurai-medium {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hind-madurai-semibold {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hind-madurai-bold {
+    font-family: "Hind Madurai", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.navbar {
+    max-width: 1440px;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.nav-logo {
+    height: 6.25rem;
+    width: 6.25rem;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-head {
+    max-width: 50%;
+    color: rgba(0, 103, 71, 1);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-aside {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    ;
+}
+
+#heart-count {
+    font-weight: 800;
+}
+
+#coin-count {
+    font-weight: 800;
+}
+
+.nav-coin-count {
+    font-weight: 800;
+}
+
+.nav-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    max-width: 120px;
+    max-height: 30px;
+    padding: 13px;
+    background-color: rgba(65, 255, 107, 0.09);
+    border-radius: 1.2rem;
+
+}
+
+.nav-child-img {
+    height: 1.725rem5rem;
+    width: 1.75rem;
+}
+
+.n-child {
+    background-color: rgba(0, 166, 62, 1);
+    color: white;
+    max-width: 110px;
+    max-height: 50px;
+    padding: 16px;
+    border-radius: 1.2rem;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* banner section related css */
+
+.banner-parent {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 48px;
+}
+
+.banner {
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(90deg, #013223 0%, #006747 50%, #013223 100%);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0 auto;
+
+
+}
+
+.banner-img {
+    height: 6rem;
+    width: 6rem;
+    margin: 0 auto;
+}
+
+.banner-head {
+    color: white;
+    font-size: 40px;
+    margin-top: 11px !important;
+    margin-bottom: 0px !important;
+}
+
+.banner-des {
+    color: white;
+    font-size: 20px;
+    margin-top: 11px !important;
+}
+
+.cart-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #F5FFF6;
+    display: grid;
+    grid-template-columns: repeat();
+}
+.cart-service-container{
+
+}
+
+.cart1 {
+    padding: 32px;
+    border: 3px solid salmon;
+    max-width: 400px;
+    background-color: white;
+}
+
+.cart-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-icon-img-container {
+
+    background-color: antiquewhite;
+    padding: 14px;
+    border-radius: 12px;
+}
+
+.cart-icon-img {
+    height: 32px;
+    width: 32px;
+}
+.cart-head{
+    font-size: 24px;
+    margin-top: 16px;
+}
+.cart-des{
+    font-size: 18px;
+    color: rgba(92, 92, 92, 1);
+}
+
+/* .cart-icon-img{
+    
+} */
+
+.cart-num{
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.cart-category{
+    background-color: #d3d3d3;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.cart-btn-cc{
+    display: flex;
+    gap: 7px;
+    width: 100%;
+}
+.btn-Copy , .btn-Call{
+    width: calc((100% - 8px)/2);
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.btn-common{
+    border-radius: 12px;
+    background-color: rgba(0, 166, 62, 1);
+    color: white;
+    font-size: 16px;
+
+}
+
+.history{
+    border: 5px solid springgreen;
+}
+
+
+
+
+@media screen and (max-width:576px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-left: 0px;
+        margin: 0 auto;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .nav-aside {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 5px;
+    }
+
+    .nav-logo {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .nav-head {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
