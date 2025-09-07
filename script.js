@@ -1,38 +1,57 @@
-// calling alert in window
-// cart-01
-const nameService = document.getElementById('cart-head1').innerText;
-const callService = document.getElementById('num1').innerText;
+// cart calling button clicked and alert service and reducing coin section
 
-document.getElementById('call1').addEventListener('click', function (event) {
-    const coinTotal = parseInt(document.getElementById('coin-count').innerText);
-    if (coinTotal > 0) {
-        alert('Calling' + ' ' + nameService + ' ' + callService + '...');
-    }
-    else {
-        alert('You don’t have enough coins to make a call. Minimum 20 coins required.')
-        return;
-    }
-    const coinRemain = coinTotal - 20;
-    document.getElementById('coin-count').innerText = coinRemain;
-})
+const callButtons = document.getElementsByClassName('btn-Call');
+for (let callButton of callButtons) {
+    callButton.addEventListener('click', function () {
 
-//cart-02
-const nameService2 = document.getElementById('cart-head2').innerText;
-const callService2 = document.getElementById('num2').innerText;
 
-document.getElementById('call2').addEventListener('click', function (event) {
-    const coinTotal = parseInt(document.getElementById('coin-count').innerText);
-    if (coinTotal > 0) {
-        alert('Calling' + ' ' + nameService + ' ' + callService + '...');
-    }
-    else {
-        alert('You don’t have enough coins to make a call. Minimum 20 coins required.')
-        return;
-    }
-    const coinRemain = coinTotal - 20;
-    document.getElementById('coin-count').innerText = coinRemain;
-})
 
+
+
+        const callSend = callButton.parentNode.parentNode.childNodes[7].innerText;
+        const callSector = callButton.parentNode.parentNode.childNodes[3].innerText;
+
+        const coinTotal = parseInt(document.getElementById('coin-count').innerText);
+        if (coinTotal > 0) {
+            alert('Calling' + ' ' + callSector + ' ' + callSend + '...');
+
+
+            const historySection = document.getElementById('history-side');
+
+            const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const newDivHistory = document.createElement('div');
+
+            newDivHistory.innerHTML =
+                `
+                <div class="history-inbox">
+                <div>
+                    <h2 class="history-inbox-sector inter-font">${callSector}</h2>
+                    <p class="history-inbox-num hind-madurai-regular">${callSend}</p>
+                </div>
+                <p class="hind-madurai-regular">${currentTime}</p>
+            </div>
+            `;
+            historySection.appendChild(newDivHistory);
+
+        }
+        else {
+            alert('You don’t have enough coins to make a call. Minimum 20 coins required.')
+            return;
+        }
+
+        const coinRemain = coinTotal - 20;
+        document.getElementById('coin-count').innerText = coinRemain;
+    })
+}
+
+
+// document.getElementById('call-btn1')
+//     .addEventListener('click', function () {
+//         console.log('clicked');
+
+
+
+//     })
 
 
 // count copy in window
@@ -47,3 +66,6 @@ document.getElementById('Copy-btn2').addEventListener('click', function () {
     const copyResultClicked = copyClicked + 1;
     document.getElementById('copied-count').innerText = copyResultClicked;
 })
+
+
+

@@ -292,6 +292,20 @@
     font-size: 20px;
 }
 
+.history-inbox {
+    padding: 30px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.history-inbox-sector{
+    font-size: 16px;
+    font-weight: 600;
+}
+.history-inbox-num{
+    font-size: 16px;
+}
 
 
 
@@ -327,13 +341,15 @@
         font-size: 1rem;
         max-width: 65%;
     }
-    .nav-child{
+
+    .nav-child {
         gap: 2px;
         padding: 7px;
         max-width: 70px;
     }
-    .n-child{
-        padding: 4px ;
+
+    .n-child {
+        padding: 4px;
         font-size: 12px;
     }
 
@@ -342,7 +358,8 @@
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
     }
-    .cart{
+
+    .cart {
         max-width: 100%;
     }
 
@@ -352,7 +369,8 @@
         gap: 30px;
 
     }
-    .history{
+
+    .history {
         max-width: 100%;
     }
 
