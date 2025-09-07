@@ -4,10 +4,6 @@ const callButtons = document.getElementsByClassName('btn-Call');
 for (let callButton of callButtons) {
     callButton.addEventListener('click', function () {
 
-
-
-
-
         const callSend = callButton.parentNode.parentNode.childNodes[7].innerText;
         const callSector = callButton.parentNode.parentNode.childNodes[3].innerText;
 
@@ -44,28 +40,26 @@ for (let callButton of callButtons) {
     })
 }
 
+// count copy click in window
+const copyButtons = document.getElementsByClassName('btn-Copy');
+for (let copyButton of copyButtons) {
+    copyButton.addEventListener('click', function () {
+        const copyCount = parseInt(document.getElementById('copied-count').innerText);
+        console.log(copyCount)
+        let finalCopy = copyCount+1;
+        document.getElementById('copied-count').innerText = finalCopy;
 
-// document.getElementById('call-btn1')
-//     .addEventListener('click', function () {
-//         console.log('clicked');
+    });
+}
 
+// count heartclcik in window
+const heartButtons = document.getElementsByClassName('heart-btn');
+for (let heartButton of heartButtons) {
+    heartButton.addEventListener('click', function () {
+        const heartCount = parseInt(document.getElementById('heart-count').innerText);
+        console.log(heartCount)
+        let finalHeart = heartCount+1;
+        document.getElementById('heart-count').innerText = finalHeart;
 
-
-//     })
-
-
-// count copy in window
-
-document.getElementById('Copy-btn1').addEventListener('click', function () {
-    const copyClicked = parseInt(document.getElementById('copied-count').innerText)
-    const copyResultClicked = copyClicked + 1;
-    document.getElementById('copied-count').innerText = copyResultClicked;
-})
-document.getElementById('Copy-btn2').addEventListener('click', function () {
-    const copyClicked = parseInt(document.getElementById('copied-count').innerText)
-    const copyResultClicked = copyClicked + 1;
-    document.getElementById('copied-count').innerText = copyResultClicked;
-})
-
-
-
+    });
+}
