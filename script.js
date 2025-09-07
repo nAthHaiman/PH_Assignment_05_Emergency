@@ -12,7 +12,7 @@ for (let callButton of callButtons) {
             alert('Calling' + ' ' + callSector + ' ' + callSend + '...');
 
 
-            const historySection = document.getElementById('history-side');
+            const historySection = document.getElementById('inbox');
 
             const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
             const newDivHistory = document.createElement('div');
@@ -24,7 +24,7 @@ for (let callButton of callButtons) {
                     <h2 class="history-inbox-sector inter-font">${callSector}</h2>
                     <p class="history-inbox-num hind-madurai-regular">${callSend}</p>
                 </div>
-                <p class="hind-madurai-regular">${currentTime}</p>
+                <p class="hind-madurai-regular time">${currentTime}</p>
             </div>
             `;
             historySection.appendChild(newDivHistory);
@@ -44,9 +44,13 @@ for (let callButton of callButtons) {
 const copyButtons = document.getElementsByClassName('btn-Copy');
 for (let copyButton of copyButtons) {
     copyButton.addEventListener('click', function () {
+
+        const numberGet = copyButton.parentNode.parentNode.childNodes[7].innerText;
+        navigator.clipboard.writeText(numberGet);
+        alert('Number Copied' + ' ' + ':' + ' '  + numberGet )
         const copyCount = parseInt(document.getElementById('copied-count').innerText);
         console.log(copyCount)
-        let finalCopy = copyCount+1;
+        let finalCopy = copyCount + 1;
         document.getElementById('copied-count').innerText = finalCopy;
 
     });
@@ -58,8 +62,12 @@ for (let heartButton of heartButtons) {
     heartButton.addEventListener('click', function () {
         const heartCount = parseInt(document.getElementById('heart-count').innerText);
         console.log(heartCount)
-        let finalHeart = heartCount+1;
+        let finalHeart = heartCount + 1;
         document.getElementById('heart-count').innerText = finalHeart;
 
     });
 }
+// clear history on click clear button
+document.getElementById('clear-btn').addEventListener('click', function () {
+    const abcs = document.getElementById('inbox').innerHTML = '';;
+})
